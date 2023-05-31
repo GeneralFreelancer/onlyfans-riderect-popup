@@ -1,1 +1,40 @@
-/*# sourceMappingURL=style.css.map */
+body {
+  background-image: url("./images/resized/desktop_fullHD_1920x1080.jpg");
+  background-position: top center;
+  background-repeat: no-repeat;
+  overflow-y: hidden;
+  overflow-x: hidden;
+}
+@media screen and (max-width: 1310px) {
+  body {
+    background-image: url("./images/resized/small-size_1280x1092.jpg");
+  }
+}
+@media screen and (max-width: 1280px) {
+  body {
+    background-image: url("./images/resized/tablet-medium-1165x1480.jpg");
+  }
+}
+@media screen and (max-width: 1162px) {
+  body {
+    background-image: url("./images/resized/tablet-medium-980x1241.jpg");
+  }
+}
+@media screen and (max-width: 980px) {
+  body {
+    background-image: url("./images/resized/tablet-medium-720x911.jpg");
+    background-size: 100%;
+  }
+}
+@media screen and (max-width: 720px) {
+  body {
+    background-image: url("./images/resized/tablet-high-500x795.jpg");
+    background-size: 100%;
+  }
+}
+@media screen and (max-width: 500px) {
+  body {
+    background-image: url("./images/resized/mobile-medium-quality_540x1042.jpg");
+    background-size: 100%;
+  }
+}/*# sourceMappingURL=style.css.map */
