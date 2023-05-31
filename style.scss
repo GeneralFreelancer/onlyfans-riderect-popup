@@ -1,0 +1,36 @@
+.overlay {
+  position: fixed;
+  z-index: 1040;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  opacity: 0;
+}
+
+.overlay.overlay_visible {
+  opacity: 1;
+  transition: opacity 0.4s ease;
+}
+
+.modal {
+  background-color: #fff;
+  height: 400px;
+  width: 500px;
+  box-shadow: 0 3px 6px rgba(0,0,0,.16);
+  border-radius: 6px;
+  overflow-x: hidden;
+  overflow-y: auto;
+  transform: scale(0.8);
+  opacity: 0;
+}
+
+.modal.modal_visible {
+  transform: scale(1);
+  opacity: 1;
+  transition: transform 0.4s ease, opacity 0.4s ease;
+}
