@@ -1,7 +1,9 @@
-function loadScript(url) {
+function loadStyle(url) {
   return new Promise((resolve, reject) => {
     const link = document.createElement("link");
     link.href = url;
+    link.type = "text/css";
+    link.rel = "stylesheet";
     link.onload = resolve;
     link.onerror = reject;
     document.head.appendChild(link);
@@ -9,10 +11,16 @@ function loadScript(url) {
 }
 
 // Usage
-const cdnUrl = 'https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css';
-const style = 'https://cdn.jsdelivr.net/gh/GeneralFreelancer/onlyfans-riderect-popup/style.css';
-loadScript(cdnUrl);
-loadScript(style);
+const cdnUrl = "https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css";
+const style = "https://cdn.jsdelivr.net/gh/GeneralFreelancer/onlyfans-riderect-popup/style.css";
+loadStyle(cdnUrl)
+  .then(() => {
+    console.log("ok normalize");
+    loadStyle(style).then(() => {console.log('ok main style')}).catch(() => {console.log('error loading style')})
+  })
+  .catch(() => {
+    console.log("error loading normalize");
+  });
 
 // modal
 
@@ -22,7 +30,7 @@ window.addEventListener("load", function () {
   const modal = document.createElement("div");
   modal.className = "modal";
   const image = document.createElement("img");
-  image.src = "images/resized/logo.svg";
+  image.src = "https://cdn.jsdelivr.net/gh/GeneralFreelancer/onlyfans-riderect-popup@master/images/resized/logo.svg";
   image.alt = "logo";
   image.className = "modal_logo";
   const modalTitle = document.createElement("h1");
@@ -78,7 +86,6 @@ window.addEventListener("load", function () {
 
   overlay.classList.add("overlay_visible");
   modal.classList.add("modal_visible");
-
 });
 
 // modal end
