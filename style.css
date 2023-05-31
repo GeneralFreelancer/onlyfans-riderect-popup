@@ -1,4 +1,102 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap");
+* {
+  box-sizing: border-box;
+}
+
+.overlay {
+  position: fixed;
+  z-index: 1040;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  opacity: 0;
+}
+
+.overlay.overlay_visible {
+  opacity: 1;
+  transition: opacity 0.4s ease;
+}
+
+.modal {
+  margin: 30px;
+  padding: 30px;
+  background-color: #fff;
+  height: 500px;
+  width: 450px;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16);
+  border-radius: 6px;
+  overflow-x: hidden;
+  overflow-y: auto;
+  transform: scale(0.8);
+  opacity: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.modal.modal_visible {
+  transform: scale(1);
+  opacity: 1;
+  transition: transform 0.4s ease, opacity 0.4s ease;
+}
+
+.modal_buttons {
+  display: flex;
+  gap: 20px;
+  flex-direction: column;
+}
+.modal_buttons button {
+  border: none;
+  border-radius: 1000px;
+  padding: 8px 18px;
+  font-size: 16px;
+  line-height: 20px;
+  color: #fefefe;
+  background: #00aff0;
+  min-width: 250px;
+  min-height: 48px;
+  transition: opacity 0.15s ease, background-color 0.15s ease, box-shadow 0.15s ease;
+  display: inline-block;
+  text-align: center;
+  text-transform: uppercase;
+  cursor: pointer;
+}
+.modal_buttons button:hover {
+  background: #0091ea;
+  color: #fefefe;
+}
+
+.modal_logo {
+  width: 250px;
+  height: 50px;
+}
+
+.link_block {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.link_block a {
+  color: #8a96a3;
+  text-decoration: none;
+}
+.link_block a:hover {
+  color: #0091ea;
+}
+@media screen and (max-width: 420px) {
+  .link_block {
+    flex-direction: column;
+  }
+}
+
 body {
+  font-family: "Roboto", sans-serif;
   background-image: url("./images/resized/desktop_fullHD_1920x1080.jpg");
   background-position: top center;
   background-repeat: no-repeat;
