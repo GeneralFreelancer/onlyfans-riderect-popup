@@ -34,7 +34,7 @@ window.addEventListener("load", function () {
   image.className = "modal_logo";
   const modalTitle = document.createElement("h1");
   modalTitle.className = "modal_title";
-  modalTitle.textContent = "Ваш возраст";
+  modalTitle.textContent = "Your age";
   const modalButtons = document.createElement("div");
   modalButtons.className = "modal_buttons";
   const button18Plus = document.createElement("button");
