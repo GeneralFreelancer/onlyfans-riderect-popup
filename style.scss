@@ -34,3 +34,31 @@
   opacity: 1;
   transition: transform 0.4s ease, opacity 0.4s ease;
 }
+body {
+  background-image: url('./images/resized/desktop_fullHD_1920x1080.jpg');
+  background-position: top center;
+  background-repeat: no-repeat;
+  overflow-y: hidden;
+  overflow-x: hidden;
+  @media screen and (max-width: 1310px) {
+    background-image: url('./images/resized/small-size_1280x1092.jpg');
+  }
+  @media screen and (max-width: 1280px) {
+    background-image: url('./images/resized/tablet-medium-1165x1480.jpg');
+  }
+  @media screen and (max-width: 1162px) {
+    background-image: url('./images/resized/tablet-medium-980x1241.jpg');
+  }
+  @media screen and (max-width: 980px) {
+    background-image: url('./images/resized/tablet-medium-720x911.jpg');
+    background-size: 100%;
+  }
+  @media screen and (max-width: 720px) {
+    background-image: url('./images/resized/tablet-high-500x795.jpg');
+    background-size: 100%;
+  }
+  @media screen and (max-width: 500px) {
+    background-image: url('./images/resized/mobile-medium-quality_540x1042.jpg');
+    background-size: 100%;
+  }
+}
