@@ -19,8 +19,9 @@
 
 .modal {
   background-color: #fff;
-  height: 400px;
-  width: 500px;
+  height: 500px;
+  width: 450px;
+  z-index: 1050;
   box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16);
   border-radius: 6px;
   overflow-x: hidden;
